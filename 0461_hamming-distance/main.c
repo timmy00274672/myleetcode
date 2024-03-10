@@ -33,13 +33,14 @@ https://leetcode.com/problems/hamming-distance/description/
 */
 
 #include <stdbool.h>
-#include <stdio.h>
 #include <stdint.h>
+#include <stdio.h>
 
 // =================================
 #pragma GCC optimize("O3", "unroll-loops")
-int hammingDistance(int x, int y) {
-    int count = 0;
+int hammingDistance(int x, int y)
+{
+	int count = 0;
 	int z = x ^ y;
 	while (z) {
 		count += z & 1;
